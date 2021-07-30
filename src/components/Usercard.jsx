@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/img-redundant-alt */
 import React, { Component } from 'react';
 
 class UserInfo extends Component {
@@ -16,14 +17,15 @@ class UserInfo extends Component {
         const response = await fetch('https://randomuser.me/api/?results=4').then((response) => response.json());
         this.setState({
             users: response.results
-
         });
+
+        console.log(response)
     }
 
     render() {
         return (
             <>
-                <h3>Random Users </h3>
+                <h3>Random Picks </h3>
                 {this.state.users.map(users =>
                     <div class='frame'>
                         <img alt='user-image' src={users.picture.large}></img> <br />
@@ -33,9 +35,9 @@ class UserInfo extends Component {
                         Age: {users.dob.age} <br />
                         Location: {users.location.country}, {users.location.state} <br />
                         Email: {users.email}
-                       
 
                     </div>)}
+
 
             </>
         );

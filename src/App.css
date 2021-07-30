@@ -1,6 +1,7 @@
 .App {
   text-align: center;
   font-family: cursive;
+  
 }
 
 .App-logo {
@@ -39,14 +40,24 @@
 }
 
 .frame {
-  border: 2px solid black;
+
+  display: flex;
+  flex-direction: row;
+  flex-flow: wrap;
+  justify-content: center;
   padding:20px; 
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
-  margin-left: 1000px;
-  margin-right: 1000px;
+  background-color: rgb(238, 248, 238);
+  
 }
 
 .frame>img {
+  margin:10px;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.6);
 }
 
+.reload{
+  margin:20px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.6);
+  color:blue;
+}
